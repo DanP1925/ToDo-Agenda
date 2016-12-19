@@ -1,0 +1,47 @@
+<template name="taskPage">
+    <div class="panel-group taskDescription">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Title:
+            </div>
+            <div class="panel-body">
+                {{title}}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Description:
+            </div>
+            <div class="panel-body">
+                <p class="lead">{{description}}</p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Created Date:
+            </div>
+            <div class="panel-body">
+                {{formatCreatedDate}}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Deadline:
+            </div>
+            <div class="panel-body">
+                {{formatDeadline}}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Priority:
+            </div>
+            <div class="panel-body">
+                {{priority}}
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-success back">Back</button>
+    </div>
+</template>

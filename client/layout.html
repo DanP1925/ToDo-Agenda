@@ -1,0 +1,18 @@
+<template name="layout">
+    <div class="header row">
+        <div class="col-md-2">
+            {{> loginButtons}}
+        </div>
+        <div class="col-md-6">
+            {{#if currentUser}}
+                {{> message currentUser}}
+            {{else}}
+                <h2 class="text-center">Welcome to the ToDoAgenda</h2>
+            {{/if}}
+            <h2 class="text-center">{{currentDate}}</h2>
+        </div>
+    </div>
+    <div class="taskTable">
+        {{> yield}}
+    </div>
+</template>

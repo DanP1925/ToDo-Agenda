@@ -1,0 +1,23 @@
+body{
+    background-color: #045FB4;
+}
+
+.active td {
+    background-color: silver;
+}
+
+.header{
+    background-color: white;
+}
+
+#tableTitle{
+    background-color: #E6E6FA;
+}
+
+#addForm, .taskDescription{
+    padding: 20px;
+}
+
+#addForm label{
+    color: white;
+}

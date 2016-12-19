@@ -1,0 +1,13 @@
+<template name="taskItem">
+    {{#if isCreatedBefore}}
+        {{#if isBeforeDeadline}}
+            {{#if isntCompleted}}
+                <tr class="clickable-row" style="background-color: {{bgcolor}}">
+                    <td style="display: none">{{_id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{formatDeadline}}</td>
+                </tr>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</template>

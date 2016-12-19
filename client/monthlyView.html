@@ -1,0 +1,33 @@
+<template name="monthlyView">
+    <div class="row">
+        {{> viewButtons}}
+        <div class="col-md-3">
+            <div class="panel panel-success">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <input id="selectedDate" type="text">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">Today you have to do:</div>
+                <div class="panel-body">
+                    {{#with mostImportantTask}}
+                        <h2>Title:</h2>
+                        <h3>{{title}}</h3>
+                        <h2>Description: </h2>
+                        <h3>{{description}}</h3>
+                        <h2>Created Date: </h2>
+                        <h3>{{formatCreatedDate}}</h3>
+                        <h2>Deadline: </h2>
+                        <h3>{{formatDeadline}}</h3>
+                        <h2>Priority: </h2>
+                        <h3>{{priority}}</h3>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

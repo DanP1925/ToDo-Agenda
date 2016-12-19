@@ -1,0 +1,33 @@
+<template name="tasksList">
+    <div class="row header text-center">
+        <div class="col-md-4 btn-group pull-right">
+            <button type="button" class="btn btn-success add">Add Task</button>
+            <button type="button" class="btn btn-success complete">Complete Task</button>
+            <button type="button" class="btn btn-success delete">Delete Task</button>
+        </div>
+    </div>
+    <div class="row">
+        {{> viewButtons}}
+        <div class="col-md-10 tasks">
+            <table class="table table-bordered" id="taskTable">
+                <thead>
+                <tr id="tableTitle">
+                    <th>Title</th>
+                    <th>Deadline</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each tasks}}
+                    {{> taskItem}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="btn-group">
+            <button type="button" class="btn btn-success yesterday">Yesterday</button>
+            <button type="button" class="btn btn-success tomorrow">Tomorrowk</button>
+        </div>
+    </div>
+</template>
